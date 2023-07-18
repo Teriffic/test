@@ -36,6 +36,7 @@ int main()
     ofstream fout(getenv("OUTPUT_PATH"));
 
     string bnm_temp;
+    
     getline(cin, bnm_temp);
 
     vector<string> bnm = split_string(bnm_temp);
@@ -45,7 +46,7 @@ int main()
     int n = stoi(bnm[1]);
 
     int m = stoi(bnm[2]);
-
+    
     string keyboards_temp_temp;
     getline(cin, keyboards_temp_temp);
 
