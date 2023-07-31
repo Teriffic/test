@@ -3,10 +3,9 @@
 using namespace std;
 int removeDuplicateElement(int arr[],int n){
      
-    int idx=-1;
-    int j =0;
-    
-    for(int i=0;i<n;i++){
+       int j =0;
+    int i;
+    for(i=0;i<n-1;i++){
 
         if(arr[i]!=arr[i+1]){
             
@@ -16,7 +15,7 @@ int removeDuplicateElement(int arr[],int n){
         }        
         
     }    
-    
+    arr[j++] = arr[i];
 
     return j;
      
@@ -24,7 +23,7 @@ int removeDuplicateElement(int arr[],int n){
 
 int main(){
     
-    int arr[] ={1,1,2,2};
+    int arr[] ={1,2};
     
     
 

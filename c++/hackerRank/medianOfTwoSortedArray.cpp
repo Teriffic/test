@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 
-void merge(vector<int> &arr,vector<int> &brr,vector<int> &crr){
+double merge(vector<int> &arr,vector<int> &brr,vector<int> &crr){
     int i=0;
     int j=0;
     int k=0;
@@ -31,7 +31,17 @@ void merge(vector<int> &arr,vector<int> &brr,vector<int> &crr){
             crr[k++] = arr[i++]; 
         }
     }
+    cout<<k;
+    double mid;
 
+    if(m+n%2==0){
+        double n1 = crr[k/2];
+        double n2 = crr[k/2-1];
+        mid = (n1+n2)/2;
+    }else{
+        mid = crr[k/2];
+    }
+    return mid;
     
 }
 
@@ -46,7 +56,7 @@ int main(){
     vector<int> b(brr,brr+m);
     vector<int> crr(m+n);
     //cout<<m+n;
-    merge(a,b,crr);
+    cout<<merge(a,b,crr);
      //int p = max(m,n);
     for(int ele: crr) {
         cout<<ele<<" ";
