@@ -34,7 +34,9 @@ int main(){
     while(1){
 
         cout<<temp.val<<"";
+
         if(temp.next ==NULL) break;
+        
         temp = *(temp.next);
     }
 }       
