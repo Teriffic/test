@@ -4,6 +4,7 @@ using namespace std;
 
 int partition(int arr[],int si,int ei){
     int count =0;
+
     int pivotEle = arr[si];
     for(int i=si+1;i<=ei;i++){
         
@@ -50,6 +51,7 @@ int main(){
     //vector<int> v(arr,arr+n);
     quickSort(arr,0,n-1);
     cout<<endl;
+    
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
     }
